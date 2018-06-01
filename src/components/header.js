@@ -1,33 +1,22 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Container from '../components/Container'
+import Menu from '../components/Menu'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
+const Header = ({siteTitle}) => (
+  <header className="header">
+    <Container>
+      <div className="flex align-middle">
+        <Link to="/" className="header__logo__link">
+          <img
+            className="header__logo"
+            src="http://www.blue-box-digital.com/images/logo.svg"
+            alt=""/>
         </Link>
-      </h1>
-    </div>
-  </div>
+        <Menu/>
+      </div>
+    </Container>
+  </header>
 )
 
 export default Header
